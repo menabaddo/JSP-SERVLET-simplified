@@ -12,4 +12,16 @@
 </servlet-mapping>
 
 
+<servlet>
+<servlet-name>test</servlet-name>
+<servlet-class>com.techxyz.SqServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>test</servlet-name>
+<url-pattern>/sq</url-pattern>
+</servlet-mapping>
+
+
+
 </web-app>
