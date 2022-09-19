@@ -4,6 +4,12 @@
 <servlet>
 <servlet-name>test</servlet-name>
 <servlet-class>com.techxyz.AddServlet</servlet-class>
+
+<init-param>
+<param-name>name</param-name>
+<param-value>beans</param-value>
+
+</init-param>
 </servlet>
 
 <servlet-mapping>
@@ -21,6 +27,29 @@
 <servlet-name>test1</servlet-name>
 <url-pattern>/sq</url-pattern>
 </servlet-mapping>
+
+
+
+<servlet>
+<servlet-name>test2</servlet-name>
+<servlet-class>com.techxyz.MyServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>test2</servlet-name>
+<url-pattern>/tt</url-pattern>
+</servlet-mapping>
+
+<context-param>
+<param-name>name</param-name>
+<param-value>Alexander Edmund</param-value>
+</context-param>
+
+
+<context-param>
+<param-name>Phone</param-name>
+<param-value>Techno</param-value>
+</context-param>
 
 
 

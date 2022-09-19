@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletConfig;
+import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
@@ -17,14 +19,14 @@ public class AddServlet extends HttpServlet {
 		
 		//request always goes to service method
 		//do post will only work with a post request
-		
-		int i = Integer.parseInt(req.getParameter("num1"));
-		
-		int j = Integer.parseInt(req.getParameter("num2"));
-		
-		int k = i + j;
-		//query string is when the input is passed as a string to the url
 //		
+//		int i = Integer.parseInt(req.getParameter("num1"));
+//		
+//		int j = Integer.parseInt(req.getParameter("num2"));
+//		
+//		int k = i + j;
+//		//query string is when the input is passed as a string to the url
+////		
 //		HttpSession session = req.getSession();
 //		session.setAttribute("k", k);
 //		
@@ -33,12 +35,12 @@ public class AddServlet extends HttpServlet {
 		
 		
 		//cookie is more like a token that remembers your face regardless
-		
-		Cookie cookie = new Cookie("k", k + "");
-		res.addCookie(cookie);
-		
-		res.sendRedirect("sq"); //telling client to call sqServlet
-		
+//		
+//		Cookie cookie = new Cookie("k", k + "");
+//		res.addCookie(cookie);
+//		
+//		res.sendRedirect("sq"); //telling client to call sqServlet
+//		
 		
 		
 //		  PrintWriter out = res.getWriter(); //res goes from server to client
@@ -54,6 +56,15 @@ public class AddServlet extends HttpServlet {
 		//using req dispatcher to choose servlet
 //		RequestDispatcher rd = req.getRequestDispatcher("sq");
 //		rd.forward(req, res);
+		
+		PrintWriter out = res.getWriter();
+		out.print("Hi ");
+		
+		//servletConfig is only available to that servlet
+		ServletConfig cg = getServletConfig();
+		String str = cg.getInitParameter("name");
+		out.print(str);
+		
 		
 	
 //		
