@@ -23,16 +23,27 @@ public class AddServlet extends HttpServlet {
 		int k = i + j;
 		//query string is when the input is passed as a string to the url
 		
+		
+		
+		//SEND REDIRECT
+		
+		res.sendRedirect("sq?k="+k);
+		
+		
 //		  PrintWriter out = res.getWriter(); //res goes from server to client
 //		
 //		out.println("Result: " + k);
-		req.setAttribute("k", k);
+//		req.setAttribute("k", k);
+		
+		//request object will have all the data which our servlet needs
+		
+		//response object will have all the data which the client needs
 		
 		
 		//using req dispatcher to choose servlet
-		RequestDispatcher rd = req.getRequestDispatcher("sq");
-		rd.forward(req, res);
-		
+//		RequestDispatcher rd = req.getRequestDispatcher("sq");
+//		rd.forward(req, res);
+//		
 		
 	}
 
