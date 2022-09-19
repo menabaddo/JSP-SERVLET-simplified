@@ -13,12 +13,12 @@
 
 
 <servlet>
-<servlet-name>test</servlet-name>
+<servlet-name>test1</servlet-name>
 <servlet-class>com.techxyz.SqServlet</servlet-class>
 </servlet>
 
 <servlet-mapping>
-<servlet-name>test</servlet-name>
+<servlet-name>test1</servlet-name>
 <url-pattern>/sq</url-pattern>
 </servlet-mapping>
 

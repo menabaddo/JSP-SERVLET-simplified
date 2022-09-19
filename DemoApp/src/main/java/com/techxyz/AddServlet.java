@@ -26,10 +26,14 @@ public class AddServlet extends HttpServlet {
 //		  PrintWriter out = res.getWriter(); //res goes from server to client
 //		
 //		out.println("Result: " + k);
+		req.setAttribute("k", k);
+		
 		
 		//using req dispatcher to choose servlet
 		RequestDispatcher rd = req.getRequestDispatcher("sq");
 		rd.forward(req, res);
+		
+		
 	}
 
 }
