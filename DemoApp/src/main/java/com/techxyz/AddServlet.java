@@ -1,6 +1,7 @@
 package com.techxyz;
 
 import java.io.IOException;
+
 import java.io.PrintWriter;
 
 import jakarta.servlet.RequestDispatcher;
@@ -14,7 +15,9 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
-@WebServlet("/add") //annotation tells the client what servlet to use instead of using the web.xml file
+//JSP stands for Java Server Pages
+
+@WebServlet("/add")
 public class AddServlet extends HttpServlet {
 	
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException  {   //you have to go with this method name. service belongs to the service life cycle
@@ -31,23 +34,25 @@ public class AddServlet extends HttpServlet {
 ////		
 //		HttpSession session = req.getSession();
 //		session.setAttribute("k", k);
-		
-//		SEND REDIRECT
+//		
+		//SEND REDIRECT
 		
 		
 		
 		//cookie is more like a token that remembers your face regardless
 //		
-		Cookie cookie = new Cookie("k", k + "");
-		res.addCookie(cookie);
+//		Cookie cookie = new Cookie("k", k + "");
+//		res.addCookie(cookie);
 //		
-		res.sendRedirect("sq"); //telling client to call sqServlet
+//		res.sendRedirect("sq"); //telling client to call sqServlet
 //		
 		
 		
-//		  PrintWriter out = res.getWriter(); //res goes from server to client
-//		  out.println("Result: " + k);
-//		
+		  PrintWriter out = res.getWriter(); //res goes from server to client
+		  out.println("<html><body bgcolor='cyan'>");
+		  out.println("Result: " + k);
+		  out.print("</body></html>");
+		
 //		req.setAttribute("k", k);
 		
 		//request object will have all the data which our servlet needs
