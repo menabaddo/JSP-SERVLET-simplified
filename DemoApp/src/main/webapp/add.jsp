@@ -9,8 +9,9 @@
 <body bgcolor="cyan">
 
 <!-- request is an implicit object and is giving to us as default -->
-	<!-- delimeter is used to specify java code in jsp -->
-	
+	<!-- sriptlet is used to specify java code in jsp  delimeter-->
+	<!-- declaration is used using the "<percent and ! to declare variables or methods outside the service method " -->
+	<!-- <percentage@ page name import = "java.util" perc > to import -->
 	<% 
 		int i = Integer.parseInt(request.getParameter("num1"));
 		
@@ -18,7 +19,7 @@
 		
 		int k = i + j;
 		
-		out.println("Output : " + k);
+		out.println("Output : " + k); //<% = k close tag (expression)
 		
 		%>
 
