@@ -1,0 +1,23 @@
+Directives- @page @include taglib
+
+@page allows dev to specify attributes for that particuar page e.g content type, import, language
+
+@include allows dev to add code from another jsp page 
+
+taglib allows you to define your own tags, but uri has to be specified
+
+
+
+IMPLICIT OBJECT
+Builtin Object (can be used in Scriplet and Expression)
+
+request (HttpServletRequest)
+response(HttpServletResponse)
+pageContext(PageContext)
+out(JspWriter) ~ PrintWriter Object
+session(HttpSession)
+application (ServletContext)
+config(ServletConfig)
+
+//watch navin's video on JDBC
+
